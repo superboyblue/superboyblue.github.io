@@ -22,7 +22,7 @@ h1 {
 #mail {
     display: align-right;
     border: solid 1px red;
-    padding-right: 10px;
+    margin right: 1px;
     float: right;
     position:relative;
 }
@@ -45,4 +45,9 @@ form {
 }
 button {
     display: center;
+}
+footer {
+	display: bottom;
+	position: absolute;
+	clear:both;
 }
