@@ -1,0 +1,82 @@
+body {
+    background-color:#B0C4DE;
+}
+aside {
+    border: solid 3px black;
+  	height: 1000px;
+	width: 150px;
+	background-color: #A7DBD8;
+	float: left;
+    margin-top: 15%;
+	margin-bottom: 10px;
+   border-radius: 10px;
+}
+nav {
+    text-align: center;
+    display: inline;
+    position: absolute;
+    width: 100%; 
+    height: 3em;
+    border: black solid 3px;
+    border-radius: 10px;
+    background-color: gray;
+    margin: 10px;
+   
+}
+button {
+    color: white;
+    background-color: black;
+    height: 5em;
+        width: 5em;
+    border-radius: 100%;
+    float: center;
+   
+}
+
+footer {
+   right:0;
+   bottom:0;
+   left:0;
+   text-align: right;
+   
+    clear:both;
+    
+}
+
+.social-media{
+    border: black 1px solid;
+    border-radius:4px;
+    height: 2em;
+    width: 6em;
+    background-color: #556D8B;
+    bottom: 2em;
+    float: left;
+    margin: 1px 5px 5px 5px;
+    
+}
+
+
+#ads { 
+     border: solid 3px black;
+  	height: 100px;
+	width: 150px;
+	background-color: #A7DBD8;
+	float: right;
+    margin-top: 15%;
+	margin-bottom: 10px;
+   border-radius: 10px;
+    position: relative;
+   
+}
+
+
+
+section {
+    border: solid black 5px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    margin-left:25%;
+    margin-right:25%;
+    margin-top: 15%;
+}
