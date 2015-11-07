@@ -1,5 +1,5 @@
 h1 {
-	
+    
     display: align-right;
     background-color: #bbd2fa;
     color: #FFFFFF;
@@ -16,3 +16,13 @@ body {
     background-color:#e0e0eb;
 }
 
+section {
+     border: solid black 5px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    padding:5%;
+    margin-top: 5%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
