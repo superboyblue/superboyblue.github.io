@@ -22,7 +22,6 @@ body {
 }
 aside {
     border: solid 3px black;
-    height: 1000px;
     width: 150px;
     background-color: #A7DBD8;
     float: left;
@@ -58,7 +57,7 @@ footer {
    left:0;
    text-align: right;
    
-    clear:both;
+    
     
 }
 
@@ -76,8 +75,6 @@ footer {
     height: 100px;
     width: 150px;
     background-color: #A7DBD8;
-    float: right;
-    margin-top: 15%;
     margin-bottom: 10px;
    border-radius: 10px;
     position: relative;
