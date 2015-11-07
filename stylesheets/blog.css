@@ -1,16 +1,16 @@
 h1 {
     
-    display: align-right;
+ 
     background-color: #bbd2fa;
     color: #FFFFFF;
-    font-family: Comic-sans, Verdana;
+    font-family:  Verdana;
     border-radius: 30px;
     padding: 5px;
     position: relative;
 }
 
 h2 {
-    font-family: Helvectica, Tahoma;
+    font-family: Tahoma;
 }
 body {
     background-color:#e0e0eb;
@@ -25,4 +25,6 @@ section {
     margin-top: 5%;
     margin-left: 20%;
     margin-right: 20%;
+    font-family: Helvetica;
+    font-size: 1em;
 }
