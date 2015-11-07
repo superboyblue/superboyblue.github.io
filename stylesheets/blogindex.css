@@ -84,11 +84,28 @@ footer {
 
 
 section {
-    border: solid black 5px;
-    border-radius: 10px;
+    
     text-align: center;
     position: relative;
     margin-left:25%;
     margin-right:25%;
     margin-top: 15%;
+}
+#post-1 {
+    border: solid black 5px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    padding:5%;
+    margin-top: 10%;
+
+}
+#post-2 {
+    border: solid black 5px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    padding:5%;
+    margin-top: 10%;
+
 }
