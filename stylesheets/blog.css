@@ -1,0 +1,18 @@
+h1 {
+	
+    display: align-right;
+    background-color: #bbd2fa;
+    color: #FFFFFF;
+    font-family: Comic-sans, Verdana;
+    border-radius: 30px;
+    padding: 5px;
+    position: relative;
+}
+
+h2 {
+    font-family: Helvectica, Tahoma;
+}
+body {
+    background-color:#e0e0eb;
+}
+
