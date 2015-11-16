@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<head>
+  <title>padding border margins</title>
+  <meta charset="UTF-8">
+  <link type="text/css" rel="stylesheet" href="\stylesheets\default.css">
+  <link type="text/css" rel="stylesheet" href="\stylesheets\blog.css">
+</head>
+<body>
+<main>
+  <h1>Blog entry 3</h1>
+  <h2>So you're bordering on padding margins...</h2>
+  <h4>Today's Date</h4>
+
+  <section>
+    <p>
+
+Arrays and Hashes
+
+Arrays and hashes are the great data storage warehouses of ruby. Arrays take any object you give them and keeps them in the order that they are received. They take objects and hold them forever (as long as you want them) in exactly the same position until you change it. So you might wonder how you're going to find an object in an array if they're just stuffed in there exactly the way they went in? Well, it turns out they're numerically ordered, or indexed in the order they were received (which starts at zero because that's how they roll). But what if you already put in an array and want to add some stuff to it? Turns out you can!
+
+With special methods, you can add or remove objects from either end of the array. To add objects, you can use:
+
+unshift - adds an object to the beginning
+Say you have an array and you want to add something to the beginning because anything good always starts with puppies.
+
+a = ["dogs","kittens","cats"]
+a.unshift ("puppies")
+=> ["puppies", "dogs", "kittens", "cats"]
+
+push - adds an object(s) to the end
+Oh no! What if, in some alternate dimension, you wrote the same array but forgot something towards the end?
+
+a = ["puppies,"dogs","kittens"]
+a.push ("cats")
+=> ["puppies", "dogs", "kittens", "cats"]
+
+That was a close one. Push allows you to take more than one argument, so if you forgot 2 things at the end, don't sweat it. Ruby is here for you.
+
+a = ["puppies","dogs"]
+a.push ("kittens","cats")
+=> ["puppies", "dogs", "kittens", "cats"]
+
+<< - adds an object (singular) to the end
+
+So you're wondering why we need the '<<' if we have push? I'm guessing it's for this situation: You're working at the animal shelter and you don't have much time before the great adoption event of the year! You need to make sure all the animals are in but your laptop is running low on battery and one of our fluffy little friends just ate your charger. What do you do? '<<' to the rescue! Save on keystrokes, save the day!
+
+a = ["puppies","dogs","kittens"]
+a << "cats"
+=> ["puppies", "dogs", "kittens", "cats"]
+
+Insert - allows you to insert an object anywhere in the array, beginning middle or end
+A well meaning couple brought an animal to the shelter which they thought could have been one of the four things that you take in, but turns out they maybe aren't the best at identifying animals? We've all been there! But have no fear, insert is here!
+
+a = ["puppies","dogs","kittens, cats"]
+a.insert(2,"pandas")
+=> ["puppies", "dogs", "pandas", "kittens, cats"]
+
+The first argument that insert takes is the index position your new object is taking. The second argument, is the object itself. And that's how the local shelter was investigated by the government. 
+
+In order to remove objects from your arrays, you can always use:
+
+Shift - removes an object from the beginning of an array
+So you want to remove something from the beginning of an array? Maybe the first object is no longer available for whatever reason (maybe they all got adopted), and you want it out permanently? Hopefully they all grew up to be the second thing?
+
+a = ["puppies","dogs","kittens","cats"]
+a.shift
+=> "puppies"
+
+Ruby returns the object that is removed, at least from the array. But the removal of puppies from anything will be seared into your memory forever!
+
+pop - removes an object from the end of an array
+The last item on the list need to go? They've all escaped and joined forces to take over the world and in the peace treaty, their demands were that from now on, cats would never be listed at any shelter ever again. But for whatever reason, they're okay with kittens being at the shelter because it builds character.
+
+a = ["puppies","dogs","kittens","cats"]
+a.pop
+=> "cats"
+
+Ruby once again returns the object that is removed, as proof that you've done the bidding of the new feline overlords. 
+
+Now, if you wanted to combine your arrays, there's something called concatenating. 
+Say it's sometime in the past and felines and canines were in segragated shelters because it was common knowledge that they'd never get along. But today is the day that they can be united under one roof, to frolic and play amongst their other fuzzy friends!
+
+So now you have two arrays that you want to combine:
+
+["puppies","dogs"].concat(["kittens","cats"])
+=> ["puppies", "dogs", "kittens", "cats"]
+
+And they all lived happily ever after. 
+
+What's that? You're wondering why you can't just push the kittens and cats into the puppies and dogs array?
+Well, as it turns out, one does not simply push kittens and cats. Because if you do, they aren't under one big roof (array) together frolicking. 
+
+["puppies","dogs"].push(["kittens","cats"])
+=> ["puppies", "dogs", ["kittens", "cats"]]
+
+The kittens and cats are inside their array, inside the puppies and dogs array. And anyone who knows anything about cats knows they won't stand for that. 
+
+Now on to hashes!
+So hashes store your info the way valets store your car in the garage. There's a spot for every car and each key/value (because cars are valuable to us) is unique. If you decide you want to switch values (cars), the old value is overwritten but the key(spot) remains the same. So you park in G2? and it's at the top floor and in the corner with the leaky pipe and you think they put you there because you have a crappy car? Well, you'll show them, won't you. You'll save up some money and buy a less crappy car, then they'll have to give you a better spot!  
+
+garage = Hash.new
+
+garage ["crap_spot"] = "crap car"
+
+garage ["crap_spot"] = "less crap car"
+
+puts garage ["crap_spot"]
+less crap car
+=>nil
+
+That means that your car is still in the crap spot and the garage doesn't care. sad face.
+
+But instead of replacing a car, maybe you'll just add a new one. You can do that by:
+
+garage ["new spot"] = "second car" 
+
+or
+
+garage. [] = ("new spot" , "second car")
+
+You can also use tell them to store it for you using .store:
+
+garage.store("new spot" , "second car")
+
+Now in order to get your car, your beater first car because you're going to help a friend move, you do this:
+
+beater_car = garage("less crap car")
+
+You can also use fetch:
+
+beater_car = garage.fetch("less crap car")
+fetch gives you an exception whereas [] will tell you nil or something you specified. Mostly because fetch is rude.
+
+Say you need both vehicles because your friend is too irresponsible to have rented a truck and now is relying on you to do everything? Lucky for them (yes, I'm talking about you, Tommy), you have 2 vehicles that you're kind enough to ruin. 
+
+both_cars = garage.values_at("less crap car","second car")  
+
+And now you've gotten both your cars out of the garage. Unfortunately, only one will return. That has nothing to do with hashes and everything to do with Tommy.
+
+For hashes, you can specify a default value if you ask for a value to a nonexistent key. Say you specify that you want them to bring you your Honda Civic whenever you ask for anything nonexistent, regardless of what you say. 
+"Bring me my porsche."
+Brings Honda Civic.
+"Bring me my unicorn."
+Brings Honda Civic. 
+
+garage = Hash.new("civic")
+
+garage["porsche"]
+
+=> "civic"
+
+I don't really know if anyone at the garage will believe you after the first time that happens, but I guess it's a good way to look like someone trying to be something they aren't and being very bad at it. 
+
+Hashes can also be combined. You can combine them together and make a third hash which destroys all the previous hashes that got it there by using update.
+
+h1.update(h2)
+
+To do it without destroying the previous hashes, you can use merge.
+
+h3 = h1.merge(h2)
+
+
+
+So arrays and hashes are both great ways to store things, but while arrays can index only by number, hashes can index by anything you want. They're both combinable, easy to manipulate, and fun to use. Hashes allow for more flexible ways of getting your info, while arrays are more rigid and immutable. 
+<p>
+    
+       
+    
+
+      <!-- copy and paste as many sections as you want to add paragraphs -->
+  </section>
+</main>
+</body>
+</html>
