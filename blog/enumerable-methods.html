@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<head>
+  <title>enumerable methods</title>
+  <meta charset="UTF-8">
+  <link type="text/css" rel="stylesheet" href="\stylesheets\default.css">
+  <link type="text/css" rel="stylesheet" href="\stylesheets\blog.css">
+</head>
+<body>
+<main>
+  <h1>Blog entry 4</h1>
+  <h2>a little slice of something...</h2>
+  <h4>Today's Date</h4>
+
+  <section>
+    
+<p>
+.each_slice is a handy little enumerable method that does exactly what it sounds like it
+<br> 
+does, it slices, it dices! It makes everything tiny and managable. 
+<br>
+<br>
+</p>
+<p>
+Say you give it a number, any number like... 10. And you want to slice it up into parts. 
+<br>
+We'll say teams of 3. And then there's a number left all by itself. It sucks to be in your 
+<br>
+own little slice sometimes. Unless it's pie. Then those people in teams have to share a 
+<br>
+slice amongst the 3 of them and you can have your own little slice to yourself. 
+<br>
+</p>
+<p>
+<br>
+And if you want to slice an array? You can do that. Just give it an array of whatever   
+<br>
+you want, and it'll slice it into arrays with the number of elements you specified. Pass it 
+<br>
+in a block and it'll print out all your slices. Pretty neat, huh? If it isn't evenly 
+<br>
+divisible, the remaining elements will once again be put in the final slice.
+</p>
+<br>
+<img src="\imgs\array_slice.png">
+<br>
+<p>
+<br>
+It works on hashes, too. With a block, the same rules apply. It'll split your hash into 
+<br>
+arrays of the number that you wanted, putting the remainders in the final slice. The arrays 
+<br>
+themselves contain the key and value pair of the hash element. 
+<img src="\imgs\hash_slice.png">
+<br>
+<br>
+</p>
+<p>
+There's also this thing where if you don't give it a code block and just a number, it'll 
+<br>
+return an enumerator and you need to use the .next method to see your slices but that's not 
+<br>
+really too helpful right now so we won't get into it. Until next time!  
+</p>
+ </section>
+</main>
+</body>
+</html>
