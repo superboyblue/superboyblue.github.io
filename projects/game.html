@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<textarea id="box" rows="2" cols="4"></textarea>
+<textarea id ="display-area">Guess a number!</textarea>
+<button type="button" onClick="guess()">submit!</button>
+<script>
+var textbox = document.getElementById("box");	
+var paragraph = document.getElementById("display-area");
+paragraph.readOnly = true;
+
+var counter = 5
+var answer = 5
+
+function guess() {
+	
+ if (textbox.value < answer){
+ 	paragraph.value = "too low"
+ 	counter -=1;
+ 	if (counter === 0){
+		alert("you lose");
+	}
+ }
+ else if (textbox.value > answer){
+ 	paragraph.value =  "too high"
+ 	counter-=1;
+ 	if (counter === 0){
+		alert("you lose");
+	}
+ }
+
+ else  
+
+ 	{counter-=1;
+ 		alert("you win")}
+
+
+}
+</script>
+</body>
+</html>
