@@ -1,5 +1,5 @@
 /* WEB FONT */
-@import url(http://fonts.googleapis.com/css?family=Signika:600|Varela+Round);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu|Baloo Tamma);
 
 /* RESET */
 * {
@@ -9,13 +9,13 @@
 }
 /* BASIC */
 body {
-  font: normal 18px/22px "Varela Round", sans-serif;
+  font: normal 18px/22px "Ubuntu", sans-serif;
   background-color: #e9ffff;
   color: #2e2e2e;
 
 }
 h1, h2 {
-  font-family: "Signika", sans-serif;
+  font-family: "Baloo Tamma". regular;
   font-weight: 600;
 }
 h1 {
